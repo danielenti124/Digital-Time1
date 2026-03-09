@@ -1,58 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Clock</title>
-    <link rel="stylesheet" href="./form.css">
-</head>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
 
-<body>
-    <div class="main-container">
-        <div class="top-box">
-            <h1 class="main-title">Digital time</h1>
-            <h2 class="sub-title">Digital clock</h2>
+  <body>
+    <main class="container">
+        <div class="time-box">
+            <div class="time">
+                <div class="hour">
+                    <span id="hour">00</span>
+                    <span id="colon">:</span>
+                </div>
+                <div class="minute">
+                    <span id="minute">00</span>
+                    <span id="colon">:</span>
+                </div>
+                <div class="second">
+                    <span id="second">00</span>
+                </div>
+            </div>
+            <div class="date">
+                <div class="day-in-words">
+                    <span id="day-in-words">dd ,</span>
+                </div>
+                <div class="month-day">
+                    <span id="month-day">mm</span>
+                </div>
+                <div class="year">
+                    <span id="year">yyyy</span>
+                </div>
+            </div>
+            <p id="sample-date"></p>
+            <p class="sample-date"></p>
         </div>
-        <header>
-            <div class="main-contain">
-                <div class="top-box">
-                    <div class="small-box">
-                        <h1 class="h1">12:03:45</h1>
-                        <p class="date">Sunday,November 24,2024</p>
-                    </div>
-                    <div class="middle-container-">
-                        <div class="middle-contain">
-                            <h1 clock="h1"></h1>
-                            <h1 substitle-clock="clock-h1"></h1>
-                        </div>
-                    </div>
-                    <script src="form.js">
-                    </script>
-        </header>
-</body>
+    </main>
+    <script>
 
+        //Set Date
+        setDate = new Date();
+
+        // Getting variables for time
+        getHour = document.getElementById("hour");
+        getMinute = document.getElementById("minute");
+        getSecond = document.getElementById("second");
+
+        //Setting time
+        getHour.textContent = setDate.getHours();
+        getMinute.textContent = setDate.getMinutes();
+        getSecond.textContent = setDate.getSeconds();
+
+        //Getting variables for date
+        getDayInWords = document.getElementById("day-in-words");
+        getMonthDay = document.getElementById("month-day");
+        getYear = document.getElementById("year");
+
+        //Setting date
+        getDayInWords.textContent = setDate.toLocaleString("en-US", { weekday: "long" }) + " ,";
+        getMonthDay.textContent = setDate.toLocaleString("en-US", { month: "long" }) + " " + setDate.getDate() + " ,";
+        getYear.textContent = setDate.getFullYear();
+
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-..
