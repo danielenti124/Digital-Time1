@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    width: 45px;
+    height: 30px;
+    /* font-family: Arial, Helvetica, sans-serif;  */
+    background: linear-gradient(to right white);
+}
+
+.het {
+    background-color: rgb(150, 138, 8);
+    color: blue;
+}
+
+.main-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1.56px;
+    gap: 30px;
+    align-items: center;
+}
+
+9 .main-contain {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+    gap: 30px;
+    align-items: center;
+}
+
+.top-box {
+    background: #200368;
+    padding: 30px 50px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: cenetr;
+    box-shadow: 0 10px 25px rgba(47, 3, 205, 0.3);
+    box-sizing: border-box;
+}
+
+.small-box {
+    background: rgba(71, 69, 69, 0.564);
+    padding: 30px 50px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: cenetr;
+    box-shadow: 0 10px 25px rgba(47, 3, 205, 0.3);
+    box-sizing: border-box;
+}
+
+
+.clock h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+
+}
+
+.box span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.box p {
+    margin: 0;
+    font-size: 14px;
+    color: #e31919;
+
+
+}
+
+*/ .date {
+    margin-top: 10px;
+    margin-right: 25px;
+    color: #c20606;
+}
+
+.middle-container {
+    height: 100%;
+    display: flex;
+    background-color: aliceblue;
+    flex-direction: space-between;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+header .main-contain.top-box {
+    background-color: aquamarine;
+}
