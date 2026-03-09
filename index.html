@@ -1,18 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./form.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Digital Clock</title>
-        <link rel="stylesheet" href="./form.css">
-    </head>
-    <body>
+  <body>
+    <main class="container">
+        <div class="time-box">
+            <div class="time">
+                <div class="hour">
+                    <span id="hour">00</span>
+                    <span id="colon">:</span>
+                </div>
+                <div class="minute">
+                    <span id="minute">00</span>
+                    <span id="colon">:</span>
+                </div>
+                <div class="second">
+                    <span id="second">00</span>
+                </div>
+            </div>
+            <div class="date">
+                <div class="day-in-words">
+                    <span id="day-in-words">dd ,</span>
+                </div>
+                <div class="month-day">
+                    <span id="month-day">mm</span>
+                </div>
+                <div class="year">
+                    <span id="year">yyyy</span>
+                </div>
+            </div>
+            <p id="sample-date"></p>
+            <p class="sample-date"></p>
+        </div>
+    </main>
+    <script>
 
-      
-                   
-                </body>
+        //Set Date
+        setDate = new Date();
 
-            </html>
+        // Getting variables for time
+        getHour = document.getElementById("hour");
+        getMinute = document.getElementById("minute");
+        getSecond = document.getElementById("second");
 
-            
+        //Setting time
+        getHour.textContent = setDate.getHours();
+        getMinute.textContent = setDate.getMinutes();
+        getSecond.textContent = setDate.getSeconds();
+
+        //Getting variables for date
+        getDayInWords = document.getElementById("day-in-words");
+        getMonthDay = document.getElementById("month-day");
+        getYear = document.getElementById("year");
+
+        //Setting date
+        getDayInWords.textContent = setDate.toLocaleString("en-US", { weekday: "long" }) + " ,";
+        getMonthDay.textContent = setDate.toLocaleString("en-US", { month: "long" }) + " " + setDate.getDate() + " ,";
+        getYear.textContent = setDate.getFullYear();
+
+    </script>
+  </body>
+</html>
